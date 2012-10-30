@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config> 
+  <global>
+    <modules>
+      <microtron_kibet>
+        <version>0.1.0</version>
+      </microtron_kibet>
+    </modules>
+		
+    <blocks>
+      <kibetsearch>
+        <rewrite>						
+          <kibetsearch>Microtron_Kibet_Block_KibetSearch</kibetsearch>
+        </rewrite>
+      </kibetsearch>
+    </blocks> 
+		
+  </global>	
+  <frontend>
+    <routers>
+      <kibet> 
+        <use>standard</use>
+        <args>
+          <module>Microtron_Kibet</module>
+          <frontName>kibet</frontName>
+        </args>
+      </kibet>
+    </routers>
+    <layout>
+      <updates>
+        <kibet>
+          <file>kibet.xml</file>
+        </kibet>
+      </updates>
+    </layout>
+  </frontend>
+		
+</config>

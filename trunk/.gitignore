@@ -1,0 +1,10 @@
+.DS_Store
+*~
+*.swp
+var/*
+!var/.htaccess
+media/*
+!media/.htaccess
+downloader/.cache/*
+/nbproject/private/
+app/etc/local.xml

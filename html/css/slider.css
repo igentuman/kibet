@@ -1,0 +1,44 @@
+.slider{
+    width: 714px; /* задаем ширину и высоту */
+    height: 360px;
+    position: relative;
+    z-index: 0;
+}
+.slider .sliderkit-nav{
+    position: absolute;
+    top: 320px;
+    left: 40px;
+}
+.slider .sliderkit-nav-clip ul li{
+    float: left;
+    margin: 0 1px 0 0;
+}
+.slider .sliderkit-nav-clip ul li a, .slider .sliderkit-nav-clip ul li.sliderkit-selected a {
+    width: 14px;
+    height: 15px;
+    background: url("../images/sprite.png") no-repeat -29px -320px;
+    display: inline-block;
+    font: 1px arial;
+    color: #fff;
+    margin: 0 5px;
+}
+.slider .sliderkit-nav-clip ul li.sliderkit-selected a {
+    background-position: -29px -335px;
+}
+.sliderkit-controls {
+    position: absolute;
+    z-index: 10;
+    margin-top: 150px;
+}
+.sliderkit-go-prev, .sliderkit-go-next {
+    width: 32px;
+    height: 31px;
+    background: url("../images/sprite.png") no-repeat -43px -321px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+}
+.sliderkit-go-next {background-position: -75px -321px; left: 630px;}
+.sliderkit-go-prev.sliderkit-btn-disable {background-position: -108px -321px; cursor: default;}
+.sliderkit-go-next.sliderkit-btn-disable {background-position: -139px -321px; cursor: default;}

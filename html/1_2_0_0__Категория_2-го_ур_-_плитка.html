@@ -1,0 +1,685 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>1_2_0_0</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.ui.slider.css" /> <!-- для выбора диапазона -->
+    <link rel="stylesheet" type="text/css" href="css/carousel.css" /> <!-- для слайдера в шапке -->
+    <link rel="stylesheet" type="text/css" href="css/slider.css" /> <!-- для слайдера в шапке -->
+    <link rel="stylesheet" type="text/css" href="css/selectbox.css" /> <!-- для Select стилизации -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen, projection" />
+	<!--[if lt IE 9]><link rel="stylesheet" href="/css/style-ie.css" type="text/css" media="screen, projection" /><![endif]-->
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+<table><tr>
+<td rowspan="2" width="250px"><a class="logotype" href="/" title="На заглавную"></a></td>
+<td colspan="3" class="header-links">
+    <div class="select-city drops left"><img class="ico-position left" src="images/spacer.gif" alt="" /><div><em>Киев</em></div>
+    <ul class="dropdown-list">
+        <li>Симферополь</li>
+        <li>Харьков</li>
+        <li>Одесса</li>
+    </ul>
+    </div>
+    
+    <a href="">Статьи и обзоры</a>
+    <a href="">Новости</a>
+    <a href="">О компании</a>
+    <a href="">Контакты</a>
+</td>
+<td>
+    <div class="drops right" id="currency">
+    <span class="left">Валюта:&nbsp;</span><div><em>грн. нал.</em></div>
+    <ul class="dropdown-list">
+    <li><a href="#">Гривна безнал</a></li>
+    <li><a href="#wmu">Вебмани WMU</a></li>
+    <li><a href="#wmz">Вебмани WMZ</a></li>
+    </ul>
+    </div>
+</td>
+</tr><tr>
+<td width="180px">
+    <div class="phone">
+    <p><i class="ico-phone"></i>044<big>923-00-22</big></p>
+    <div class="drops"><div><em>номера вашего оператора</em></div>
+    <ul class="dropdown-list">
+        <li><span></span>(067) 123-45-67</li>
+        <li><span></span>(099) 123-45-67</li>
+        <li><span></span>(063) 123-45-67</li>
+        <li><span></span>(068) 123-45-67</li>
+    </ul>
+    </div></div>
+</td>
+<td class="call"><a class="btn-call" href="#" title="Звонок онлайн"></a>бесплатный онлайн звонок</td>
+<td class="authorization"><a class="btn-enter" href="#" title="Авторизация на сайте"></a><a href="#" title="Регистрация на сайте">Регистрация</a></td>
+<td width="180px">
+    <div class="shopping">
+    <em>В вашей корзине</em>
+    <a href="#" title="Прейти к списку товаров в корзине">4 товара</a>
+    2100 грн.
+    </div>
+</td>
+</tr></table>
+<div class="clear"></div>
+</div><!-- #header-->
+<div id="middle-top">
+<div id="container-top">
+<div id="content-top">
+
+<div class="search-row">
+<span class="sl"></span>
+<span class="sr"></span>
+
+<form method="post" action="">
+<table><tr><td class="search-field" width="110px">
+<span class="sl"></span>
+<select class="styled">
+    <option>Все категории</option>
+    <option>Техника для дома</option>
+    <option>Офисная техника</option>
+</select>
+</td><td class="search-field padding">
+<input class="input-search" type="text" name="search" value="Введите строку для поиска товара" onfocus="if (this.value == 'Введите строку для поиска товара') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Введите строку для поиска товара';}" />
+</td><td width="71px">
+<input class="btn-search" type="submit" value="" />
+</td><td class="info-links">
+<a href="#" title="Условия оплаты и доставки товара">Оплата и доставка</a>
+<a href="#" title="Гарантия и сервис">Гарантия и сервис</a>
+</td></tr></table>
+</form>
+
+</div>
+<div class="stretching-20"></div>
+
+
+
+<div id="sub-middle">
+<div id="sub-container">
+<div id="sub-content">
+<div class="sorting"><span class="left">Сортировка:&nbsp;</span><div class="drops"><div><em>по-умолчанию</em></div>
+<ul class="dropdown-list">
+    <li>по популярности</li>
+    <li>по цене</li>
+    <li>по дате</li>
+</ul></div>
+<div class="right"><a class="line-view" href="#"></a><a class="table-view active" href="#"></a></div>
+</div>
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<div class="green-label-small">
+<span class="sl"></span>
+<span class="sr"></span>
+<em>Акция</em>
+</div>
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>33445</strong>&nbsp;грн.<a class="btn-bye" href="#"></a><p><input id="code-20322" type="checkbox" name="" /><label for="code-20322">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<div class="green-label-small">
+<span class="sl"></span>
+<span class="sr"></span>
+<em>Новинка</em>
+</div>
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>3445</strong>&nbsp;грн.<a href="#"><i class="ico-tick"></i>в корзине</a><p><input id="code-20323" type="checkbox" name="" /><label for="code-20323">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>33445</strong>&nbsp;грн.<a class="btn-bye" href="#"></a><p><input id="code-20324" type="checkbox" name="" /><label for="code-20324">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<div class="green-label-small">
+<span class="sl"></span>
+<span class="sr"></span>
+<em>Новинка</em>
+</div>
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>3445</strong>&nbsp;грн.<a href="#"><i class="ico-tick"></i>в корзине</a><p><input id="code-20323" type="checkbox" name="" /><label for="code-20323">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<div class="green-label">
+<span class="sl"></span>
+<span class="sr"></span>
+<em>Акция</em>
+<div class="clock">
+до окончания акции
+<strong>2ч. 34 мин 23 сек</strong>
+</div>
+</div>
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>33445</strong>&nbsp;грн.<a class="btn-bye" href="#"></a><p><input id="code-20324" type="checkbox" name="" /><label for="code-20324">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>3445</strong>&nbsp;грн.<a href="#"><i class="ico-tick"></i>в корзине</a><p><input id="code-20323" type="checkbox" name="" /><label for="code-20323">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+
+<!-- Блок товара -->
+<div class="product-box-short">
+<div class="product-img-row">
+<div class="box-shad">
+<span class="box-shad-l"></span>
+<span class="box-shad-r"></span>
+<div class="box-inner">
+
+<img src="content/dell.png" alt="" />
+</div></div></div>
+<div class="product-short-info">
+<h3>Dell Inspiron N5040 (210-36715Blk) Obsidian Black</h3>
+<div class="product-rate-row"><div class="rating"><img class="rate" src="images/spacer.gif" alt="" width="100%" /><!-- шаг 15 пикс. --></div><a href="">5 отзывов</a></div>
+<div class="product-action"><strong>33445</strong>&nbsp;грн.<a class="btn-bye" href="#"></a><p><input id="code-20324" type="checkbox" name="" /><label for="code-20324">к сравнению</label></p></div>
+</div>
+<div class="fade-block">
+<div class="product-description"><i class="tip-top"></i>
+Экран 15.6’’ (1366x768) LED, глянцевый /
+Intel Pentium P6200 (2.13 ГГц) / RAM 2 ГБ /
+HDD 500 ГБ / Intel HD Graphics / DVD+/-RW/
+Wi-Fi / Bluetooth 3.0 /веб-камера / Linux / 
+2.37 кг / черный
+</div></div>
+<div class="clear"></div></div>
+<!-- /Блок товара -->
+
+<div class="action-row">
+<a class="btn-show-more" href="">Показать еще</a>
+<div class="drops"><div><em>1 из 44 стр</em></div>
+<table class="dropdown-list">
+<tr>
+	<td><span>1</span></td>
+	<td><a href="#">2</a></td>
+	<td><a href="#">3</a></td>
+	<td><a href="#">4</a></td>
+	<td><a href="#">5</a></td>
+	<td><a href="#">6</a></td>
+	<td><a href="#">7</a></td>
+	<td><a href="#">8</a></td>
+	<td><a href="#">9</a></td>
+	<td><a href="#">10</a></td>
+</tr>
+<tr>
+	<td><a href="#">11</a></td>
+	<td><a href="#">12</a></td>
+	<td><a href="#">13</a></td>
+	<td><a href="#">14</a></td>
+	<td><a href="#">15</a></td>
+	<td><a href="#">16</a></td>
+	<td><a href="#">17</a></td>
+	<td><a href="#">18</a></td>
+	<td><a href="#">19</a></td>
+	<td><a href="#">20</a></td>
+</tr>
+<tr>
+	<td><a href="#">21</a></td>
+	<td><a href="#">22</a></td>
+	<td><a href="#">23</a></td>
+	<td><a href="#">24</a></td>
+	<td><a href="#">25</a></td>
+	<td><a href="#">26</a></td>
+	<td><a href="#">27</a></td>
+	<td><a href="#">28</a></td>
+	<td><a href="#">29</a></td>
+	<td><a href="#">30</a></td>
+</tr>
+<tr>
+	<td><a href="#">31</a></td>
+	<td><a href="#">32</a></td>
+	<td><a href="#">33</a></td>
+	<td><a href="#">34</a></td>
+	<td><a href="#">35</a></td>
+	<td><a href="#">36</a></td>
+	<td><a href="#">37</a></td>
+	<td><a href="#">38</a></td>
+	<td><a href="#">39</a></td>
+	<td><a href="#">40</a></td>
+</tr>
+<tr>
+	<td><a href="#">41</a></td>
+	<td><a href="#">42</a></td>
+	<td><a href="#">43</a></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+</div>
+</div>
+
+</div></div><!-- #sub-content, #sub-container -->
+<div id="sub-sideRight">
+
+<img src="content/banner-250x140.png" alt="" />
+<div class="stretching-10"></div>
+<h3 class="top-list-title">Топ Категории</h3>
+<ul class="top-list">
+<li><em>1</em><a href="">
+<img class="left" src="content/notebook-small.jpg" alt="" />
+HP Compaq Presario 
+CQ 57-383SR (QH800EA)
+</a></li>
+<li><em>2</em><a href="">
+<img class="left" src="content/notebook-small.jpg" alt="" />
+HP Compaq Presario 
+CQ 57-383SR (QH800EA)
+</a></li>
+<li><em>3</em><a href="">
+<img class="left" src="content/notebook-small.jpg" alt="" />
+HP Compaq Presario 
+CQ 57-383SR (QH800EA)
+</a></li>
+<li><em>4</em><a href="">
+<img class="left" src="content/notebook-small.jpg" alt="" />
+HP Compaq Presario 
+CQ 57-383SR (QH800EA)
+</a></li>
+<li><em>5</em><a href="">
+<img class="left" src="content/notebook-small.jpg" alt="" />
+HP Compaq Presario 
+CQ 57-383SR (QH800EA)
+</a></li>
+<li><em>6</em><a href="">
+<img class="left" src="content/notebook-small.jpg" alt="" />
+HP Compaq Presario 
+CQ 57-383SR (QH800EA)
+</a></li>
+</ul>
+<div class="stretching-20"></div>
+<div class="base-block">
+<a href="" title="Всплывающий тайтл для баннера рекламождетеля"><img src="content/240x390.jpg" alt="" /></a>
+<a href="" title="Всплывающий тайтл для баннера рекламождетеля"><img src="content/240x100.jpg" alt="" /></a>
+</div>
+
+</div><!-- #sub-sideRight -->
+</div><!-- #sub-middle -->
+
+</div><!-- #content-top -->
+</div><!-- #container-top -->
+<div id="sideLeft" class="sidebar">
+
+<div class="catalog-list">
+<h4 class="hides">Каталог товаров</h4>
+<div class="catalog-categories">
+<ul>
+<li><a href="#">Носители информации</a></li>
+<li><a href="#">Автоэлектроника</a><sup><a href="#">новинки</a></sup></li>
+<li><a href="#">Активный отдых и туризм</a></li>
+<li><a href="#">Видеонаблюдение</a></li>
+<li><a href="#">Аккумуляторы и зарядки</a></li>
+<li><a href="#">Комплектующие для ПК</a></li>
+<li><a href="#">Ноутбуки и портативные ПК</a></li>
+<li><a href="#">Сети и телефония</a></li>
+<li><a href="#">Расходные материалы</a></li>
+<li><a href="#">ТВ, аудио, видео и фото</a></li>
+<li><a href="#">Техника для дома</a></li>
+<li><a href="#">Офисная техника</a></li>
+<li><a href="#">Компьютерная периферия</a></li>
+</ul>
+<a class="all-categories" href="#">Все категории</a>
+</div></div>
+
+<ul class="three-nav">
+<li class="first"><a href="#">Ноутбуки и портативные ПК</a></li>
+<li class="last active"><a href="#">Ноутбуки</a></li>
+</ul>
+
+<div class="filter-list">
+<h5>Рецепты<i title="Едрить колотить!"></i></h5>
+<ul>
+    <li><input id="check-1" type="checkbox" name="" /><label for="check-1">Бюджетный</label></li>
+    <li><input id="check-2" type="checkbox" name="" /><label for="check-2">Замена настольному ПК</label></li>
+    <li><input id="check-3" type="checkbox" name="" /><label for="check-3">Игровой</label></li>
+    <li><input id="check-4" type="checkbox" name="" /><label for="check-4">Мультимедийный</label></li>
+    <li><input id="check-5" type="checkbox" name="" /><label for="check-5">Ультратонкий</label></li>
+    <li><input id="check-6" type="checkbox" name="" /><label for="check-6">Для работы</label></li>
+</ul>
+<h5>Объем оперативной памяти<i title="Едрить колотить!"></i></h5>
+<ul>
+    <li><input id="check-7" type="checkbox" name="" /><label for="check-7">1 Гб <span>(34)</span></label></li>
+    <li><input id="check-8" type="checkbox" name="" /><label for="check-8">2 Гб <span>(34)</span></label></li>
+    <li><input id="check-9" type="checkbox" name="" /><label for="check-9">3 Гб <span>(34)</span></label></li>
+    <li><input id="check-10" type="checkbox" name="" /><label for="check-10">4 Гб <span>(34)</span></label></li>
+    <li><input id="check-11" type="checkbox" name="" /><label for="check-11">6 Гб <span>(34)</span></label></li>
+    <li><input id="check-12" type="checkbox" name="" /><label for="check-12">8 Гб <span>(34)</span></label></li>
+</ul>
+<h5>Объем оперативной памяти<i title="Едрить колотить!"></i></h5>
+<ul>
+    <li><input id="check-13" type="checkbox" name="" /><label for="check-13">1 Гб <span>(34)</span></label></li>
+    <li><input id="check-14" type="checkbox" name="" /><label for="check-14">2 Гб <span>(34)</span></label></li>
+    <li><input id="check-15" type="checkbox" name="" /><label for="check-15">3 Гб <span>(34)</span></label></li>
+    <li><input id="check-16" type="checkbox" name="" /><label for="check-16">4 Гб <span>(34)</span></label></li>
+    <li><input id="check-17" type="checkbox" name="" /><label for="check-17">6 Гб <span>(34)</span></label></li>
+    <li><input id="check-18" type="checkbox" name="" /><label for="check-18">8 Гб <span>(34)</span></label></li>
+</ul>
+
+<h5>Цена</h5>
+<div class="costs">
+<input type="text" id="minCost" value="3000"/>
+<input type="text" id="maxCost" value="10000"/>
+<div class="clear"></div>
+<div id="slider"></div></div>
+
+<a class="reset-link" href="">Сбросить фильтр</a>
+</div>
+
+</div><!-- #sideLeft -->
+</div><!-- #middle-top -->
+
+<div id="middle">
+<div id="viewed" class="base-block">
+<!--                                             Карусель началась тут -->
+<div class="carousel sliderkit">
+<h3>Товары, которые Вы просматривали</h3>
+<div class="sliderkit-nav">
+<div class="sliderkit-nav-clip">
+<ul>
+
+<li><!-- 1 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/tent.jpg" alt="" />
+    <p>Палатка туристическая 3-х местная ТМ Green Season</p>
+    <em>659 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+<li><!-- 2 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/sub-woofer.jpg" alt="" />
+    <p>Колонки Genius 5.1 SW-H5.1 6000 Wood</p>
+    <em>1.850 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+<li><!-- 3 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/smartphone.jpg" alt="" />
+    <p>Сенсорный телефон LG T500 Red Edition</p>
+    <em>1.725 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+<li><!-- 4 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/wacum-cleaner.jpg" alt="" />
+    <p>Пылесос для сухой уборки PHILIPS FC 9174/01</p>
+    <em>2.231 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+
+<li><!-- 1 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/tent.jpg" alt="" />
+    <p>Палатка туристическая 3-х местная ТМ Green Season</p>
+    <em>659 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+<li><!-- 2 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/sub-woofer.jpg" alt="" />
+    <p>Колонки Genius 5.1 SW-H5.1 6000 Wood</p>
+    <em>1.850 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+<li><!-- 3 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/smartphone.jpg" alt="" />
+    <p>Сенсорный телефон LG T500 Red Edition</p>
+    <em>1.725 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+<li><!-- 4 -->
+    <div class="product-box">
+    <div class="box-shad">
+    <span class="box-shad-l"></span>
+    <span class="box-shad-r"></span>
+    <div class="box-inner">
+    <img src="content/wacum-cleaner.jpg" alt="" />
+    <p>Пылесос для сухой уборки PHILIPS FC 9174/01</p>
+    <em>2.231 грн<a class="btn-bye" href=""></a></em>
+    </div></div> 
+    </div>
+</li>
+
+</ul>
+</div>
+<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#"><span>Назад</span></a></div>
+<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#"><span>Вперед</span></a></div>
+</div>
+</div>
+<!--                                          Карусель закончилась тут -->
+<div class="right">
+
+<div class="socials-tabs">
+    <h3>Мы в социалках</h3>
+    <a href="#tab1"><img src="images/vk.png" alt="" /></a>
+    <a href="#tab2"><img src="images/facebook.png" alt="" /></a> 
+</div> 
+<div class="container"> 
+    <div id="tab1" class="tab-inner">Виджет Вконтакте</div> 
+    <div id="tab2" class="tab-inner">Виджет Фейсбука</div> 
+</div>
+</div>
+<div class="clear"></div></div>
+<div id="bottom">
+<a class="btn-manager" href="#" title="Чат с менеджером"></a>
+<div class="seo-text">
+<h2>SEO текст будет тут</h2>
+Вне зависимости от того, где вы находитесь на данный момент, вы сможете заказать товар, что, согласитесь, очень удобно. Какие же преимущества предлагает наш интернет-магазин электроники, телефонов и прочих товаров? Наиболее существенный факт - наличие тысяч позиций, которые гарантированно имеются на складе. Вы сможете посетить наш интернет магазин и купить любые товары по невысокой цене. Вам необходим холодильник, стиральная машина или микроволновая печь?
+Интернет магазин бытовой техники (Киев, Харьков, Донецк) поможет вам. Наличие множества решений позволит подобрать устройство с требуемыми характеристиками и стоимостью. Интернет-магазин техники (Харьков, Днепропетровск, Донецк) Микротрон - это многообразие предложений на любой вкус.
+Чтобы заказать товар, вам не придется никуда ехать или идти, т.к. все операции совершаются в виртуальном режиме. Именно поэтому Микротрон - это интернет-магазин телевизоров, холодильников и иной техники, покупать в котором выгодно и приятно.
+</div>
+</div>
+</div><!-- #middle-->
+</div><!-- #wrapper -->
+<div id="footer">
+<div class="footer-bg">
+<div class="footer-img">
+<span class="sl"></span>
+<span class="sr"></span>
+<a href="#">Оплата и доставка</a>
+<a href="#">Гарантия и сервис</a>
+<a href="#">Статьи и обзоры</a>
+<a href="#">Новости</a>
+<a href="#">О компании</a>
+<a href="#">Контакты</a>
+<span class="right">
+<a href="#">Связь с администратором</a><br />
+Создание сайта:<img class="creators" src="images/spacer.gif" alt="" title="Создание сайта SECL GROUP" /><a href="">SECL GROUP</a>
+</span>
+</div></div>
+</div><!-- #footer -->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.core.min.js"></script> <!-- Ui Core для выбора диапазона -->
+<script type="text/javascript" src="js/jquery.ui.slider.js"></script> <!-- для выбора диапазона -->
+<script type="text/javascript" src="js/jquery.sliderkit.1.9.2.pack.js"></script> <!-- для карусели, слайдера в шапке -->
+<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script> <!-- для карусели, слайдера в шапке -->
+<script type="text/javascript" src="js/selectbox.js"></script> <!-- для Select стилизации -->
+<script type="text/javascript" src="js/init.js"></script> <!-- для инициализации скриптов -->
+</body>
+</html>

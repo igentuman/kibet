@@ -1,0 +1,1686 @@
+/*                                                             Авторские права
+-----------------------------------------------------------------------------*
+    Author: Chirkov Alexander 
+    Copyright: SECL
+    e-mail: info@secl.com.ua
+    URL: http://www.secl.com.ua
+*/
+
+/*                                        Обнуляем стили/указываем поумолчанию
+-----------------------------------------------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	height: 100%;
+    color: #3a3a3a;
+    background: url("../images/page-bg.png") repeat-x 0 0;
+}
+a {
+	color: #4f4f4f;
+	outline: none;
+	text-decoration: underline;
+}
+a.orange {
+	color: #ff6e01;
+}
+a.pseudo-orange {
+	color: #ff6e01;
+    background: url("../images/dashed-orange.png") repeat-x 0 100%;
+    padding: 0 0 1px;
+    text-decoration: none;
+}
+a.pseudo-orange:hover {background: none;}
+a.pseudo {
+	color: #4f4f4f;
+    border-bottom: 1px dotted #4f4f4f;
+	text-decoration: none;
+}
+a.pseudo:hover {
+    border-bottom: 0;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+    outline: 0;
+}
+input {
+	vertical-align: middle;
+    outline: 0;
+}
+#wrapper {
+	min-width: 980px;
+	max-width: 980px;
+    padding: 0 10px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+h1 {font: 600 17px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; color: #393939;}
+h2 {font: 600 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; color: #393939;}
+h3 {font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; color: #393939;}
+h4, h5 {font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; color: #393939;}
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+
+.stretching {
+    clear: both;
+}
+.stretching-10 {
+    height: 10px;
+    clear: both;
+}
+.stretching-20 {
+    height: 20px;
+    clear: both;
+}
+
+/*                                                                 Шапка сайта
+-----------------------------------------------------------------------------*/
+#header {
+	height: 110px;
+}
+#header table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.header-links {
+    text-align: center;
+    padding: 10px 0 10px;
+    margin: 0 0 20px;
+}
+.header-links > a {
+    font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 10px;
+}
+
+.logotype {
+    width: 210px;
+    height: 80px;
+    background: url("../images/logotype.png") no-repeat 0 0;
+    display: inline-block;
+    margin: 0;
+    float: left;
+}
+
+/*                                                  Выбор валют | выбор города
+-----------------------------------------------------------------------------*/
+.select-city {
+    display: inline-block;
+    margin: 0 0 0 10px!important;
+}
+.select-city .dropdown-list {top: 18px;}
+
+#currency, .select-city {
+    font: 11px Arial, Tahoma;
+    color: #4f4f4f;
+    margin: 0;
+    text-indent: 0px;
+    position: relative;
+    top: 2px;
+}
+#currency {
+}
+#currency em, .select-city em, .drops em {
+    background: url("../images/dashed-orange.png") repeat-x 0 100%;
+    font: normal bold 11px Arial, Tahoma;
+    color: #ff6e01;
+}
+#currency.droped em, #currency em:hover, .drops.droped em {
+    background: none;
+}
+#currency div, .drops div {
+    height: 10px;
+    background: url("../images/arr-drops.png") no-repeat 100% 0;
+    display: inline-block;
+    padding: 0 15px 8px 0;
+    cursor: pointer;
+}
+#currency.droped div, .drops.droped div {
+    background-position: 100% -30px;
+}
+.dropdown-list {
+    padding: 5px;
+    border: 1px solid #dadada;
+    background: #fff;
+    margin: 0 0 0;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+.dropdown-list li {
+    height: 16px;
+    font: 11px Arial, Tahoma;
+    color: #545454;
+    padding: 0 5px;
+    text-align: left;
+    list-style: none;
+    line-height: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    behavior: url("../js/PIE.php");
+}
+.dropdown-list li:hover {background: #eaeaea;}
+.dropdown-list a {text-decoration: none;}
+.ico-position {
+    width: 15px;
+    height: 20px;
+    background: url("../images/ico-position.png") no-repeat 0 0;
+    margin: 0 5px -1px 0;
+}
+#currency .dropdown-list {
+    width: 96px;
+}
+
+/*                                                            Контактный номер
+-----------------------------------------------------------------------------*/
+.phone {
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+}
+.phone p {
+    font: italic 500 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #696969;
+    margin: 0 0 8px 10px;
+}
+.phone big {
+    font-size: 23px;
+    margin: 0 0 0 5px;
+    position: relative;
+    bottom: -2px;
+}
+.ico-phone {
+    width: 29px;
+    height: 32px;
+    background: url("../images/sprite.png") no-repeat 0 -320px;
+    display: inline-block;
+    margin: 0 0 -10px 0;
+}
+.phone .drops {
+    margin: 0 0 0 10px;
+}
+.phone div em {
+    height: 14px;
+    background: url("../images/dashed-black.png") repeat-x 0 100%;
+    font: normal 11px Arial, Tahoma;
+    color: #4f4f4f;
+    display: inline-block;
+}
+.phone .drops.droped em, .phone em:hover {
+    background: none;
+}
+.phone .drops div {
+    height: 10px;
+    background: url("../images/arr-drops.png") no-repeat 100% 0;
+    display: inline-block;
+    padding: 0 15px 8px 0;
+    cursor: pointer;
+}
+.phone .drops.droped div {
+    background-position: 100% -30px;
+}
+.phone .dropdown-list li {
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: default;
+}
+.phone .dropdown-list li:hover {background: none;}
+.phone .dropdown-list li span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: #ececec;
+    margin: 0 10px -5px 0;
+    border-radius: 3px;
+    behavior: url("../js/PIE.php");
+}
+
+/*                                                               Звонок онлайн
+-----------------------------------------------------------------------------*/
+
+.call {
+    height: 60px;
+    text-align: center;
+}
+.btn-call {
+    width: 166px;
+    height: 29px;
+    background: url("../images/sprite.png") no-repeat 0 -72px;
+    display: block;
+    margin: 0 auto 3px;
+}
+.btn-call:active {background-position: 0 -130px ;}
+.btn-call:hover {background-position: 0 -101px;}
+
+/*                                                     Авторизация/регистрация
+-----------------------------------------------------------------------------*/
+.authorization {
+    height: 60px;
+    text-align: center;
+}
+.btn-enter {
+    width: 74px;
+    height: 24px;
+    background: url("../images/sprite.png") no-repeat -69px 0;
+    display: block;
+    margin: 0 auto 3px;
+}
+
+.btn-enter:active {background-position: -69px -48px ;}
+.btn-enter:hover {background-position: -69px -24px;}
+
+/*                                                             Корзина покупок
+-----------------------------------------------------------------------------*/
+.shopping {
+    width: 146px;
+    height: 50px;
+    background: url("../images/ico-basket.png") no-repeat 125px 100%;
+    font: 12px Arial, Tahoma;
+    color: #535353;
+    padding: 5px 10px;
+    border: 1px solid #dadada;
+    float: right;
+    text-align: left;
+    border-radius: 4px;
+    behavior: url("../js/PIE.php");
+}
+.shopping em {
+    font: italic 500 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #616161;
+    display: block;
+    margin: 0 0 2px;
+}
+.shopping a {
+    font: normal bold 11px Arial, Tahoma;
+    color: #ff6e01;
+    display: block;
+    margin: 0 0 3px;
+}
+
+/*                                                         Правая колонка верх
+-----------------------------------------------------------------------------*/
+#middle-top {
+	width: 100%;
+	height: 1%;
+	position: relative;
+}
+#middle-top:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+#container-top {
+	width: 100%;
+	float: left;
+    margin: 0 0 20px;
+}
+#content-top {
+	padding: 0 0 0 265px;
+}
+.box-centered {
+    width: 720px;
+    margin: 0 auto;
+}
+.tabin-box {
+    margin: 0 0 20px;
+}
+.tab-controls {
+    padding: 10px 0 0;
+}
+.tab-controls a {
+    height: 35px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    background: url("../images/dashed-black.png") repeat-x 0 17px;
+    font: 14px Arial, Tahoma;
+    margin: 0 10px;
+}
+.tab-controls a:hover {background: none;}
+.tab-controls a.active {
+    min-width: 168px;
+    background: url("../images/block-arr-to-bottom.png") no-repeat 50% 100%;
+    font: 14px Arial, Tahoma;
+    color: #ff6e01;
+    border: 0;
+}
+.tabin {height: 360px;}
+
+/*                                                              Поиск по сайту
+-----------------------------------------------------------------------------*/
+.search-row, .search-row .sl, .search-row .sr {
+    width: 100%;
+    height: 49px;
+    background: url("../images/search-panel-bg.png") repeat-x 0 -98px;
+}
+.search-row .sl {width: 6px; background-position: 0 0; float: left;}
+.search-row .sr {width: 6px; background-position: 0 -49px; float: right;}
+.search-row table{
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+.search-row form {
+    padding: 7px 10px 0;
+}
+.search-field, .search-field .sl {
+    height: 33px;
+    background: url("../images/search-field-bg.png") repeat-x 0 -33px;
+}
+.search-field .sl {width: 5px; background-position: 0 0; float: left; padding: 0; margin: 0;}
+.search-field.padding {padding: 0 10px 0 5px;}
+.search-field .selectbox {
+    margin: 5px 0 0 0;
+}
+.input-search {
+    width: 100%;
+    height: 24px;
+    font: 12px Arial, Tahoma, sans-serif;
+    color: #727272;
+    margin: 2px 5px 0 0;
+    border: 0;
+    line-height: 25px;
+}
+.btn-search {
+    width: 71px;
+    height: 33px;
+    background: url("../images/sprite.png") no-repeat 0 -159px;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn-search:active {background-position: 0 -225px;}
+.btn-search:hover {background-position: 0 -192px;}
+.search-row .info-links {
+    width: 130px;
+    text-align: center;
+    line-height: 16px;
+}
+
+/*                                                          Левая колонка верх
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	float: left;
+	width: 250px;
+    margin-left: -100%;
+	position: relative;
+}
+.catalog-list {
+    background: url("../images/block-bot-bg.png") no-repeat 0 100%;
+    padding: 0 0 5px;
+    margin: 0 0 15px;
+}
+.catalog-list h3, .catalog-list h4, .catalog-list h3.hides, .catalog-list h4.hides {
+    width: 220px;
+    height: 47px;
+    background: url("../images/block-title-bg.png") no-repeat 0 0;
+    font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    padding: 0 15px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    line-height: 52px;
+    cursor: pointer;
+}
+.catalog-list h3.hides, .catalog-list h4.hides {
+    cursor: default;
+}
+.catalog-list h3.hides, .catalog-list h4.hides, .catalog-list h3.hides:hover, .catalog-list h4.hides:hover {background-position: -500px 0;}
+.catalog-list h3:hover, .catalog-list h4:hover {background-position: -250px 0;}
+/*.catalog-list h3.hides:hover, .catalog-list h4.hides:hover {background-position: -750px 0;}  Раскомментироуй эту строку если нужен hover */
+.catalog-categories {
+    border: 1px solid #dadada;
+    border-top: 0;
+    border-bottom: 0;
+    padding: 0 5px;
+}
+.catalog-categories ul {
+    padding: 5px 0;
+    margin: 0 0 5px;
+    border-bottom: 1px solid #ebebeb;
+}
+.catalog-categories li {
+    height: 27px;
+    background: url("../images/arrows.png") no-repeat 225px 0;
+    list-style: none;
+    padding: 0 10px;
+    border-radius: 6px;
+    
+}
+.catalog-categories li:hover {
+    background: #ebebeb url("../images/arrows.png") no-repeat 225px -24px;
+}
+.catalog-categories a {
+    font: 500 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    line-height: 27px;
+    text-decoration: none;
+}
+.catalog-categories sup a {
+    font: 11px Arial, Tahoma, sans-serif;
+    color: #f00;
+    text-decoration: none;
+    margin: 0 0 0 5px;
+}
+.catalog-categories sup a:hover {
+    text-decoration: underline;
+}
+.all-categories {
+    height: 24px;
+    background: url("../images/arrows.png") no-repeat 0 -48px;
+    padding: 0 10px;
+    margin: 0 0 0 10px;
+    display: block;
+    line-height: 24px;
+}
+
+/*                                                         Центральная колонка
+-----------------------------------------------------------------------------*/
+#middle {
+	width: 100%;
+	padding: 0 0 100px;
+	height: 1%;
+	position: relative;
+}
+#middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+#container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+    margin: 0 0 20px;
+}
+#content {
+	padding: 0 265px 0 0;
+}
+#content.leftColumn {
+	padding: 0 0 0 249px;    
+}
+
+/*                                                               Колонка слева
+-----------------------------------------------------------------------------*/
+#leftCol {
+    float: left;
+    width: 250px;
+    margin-left: -100%;
+    position: relative;
+}
+.tabs-noheight {/*- Табы левой колонки, стили в файле carousel.css -*/}
+ 
+/*                                       Вид базовых блоков и заголовков в них
+-----------------------------------------------------------------------------*/
+.base-block {
+    border: 1px solid #d9d9d9;
+    padding: 10px 5px;
+    margin: 0 0 10px;
+    border-radius: 5px;
+    behavior: url("../js/PIE.php");
+    background: #fff;
+}
+.base-block h3, .base-block h4 {
+    font: 500 17px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; color: #393939;
+    margin: 0 0 10px;
+    padding: 0 0 0 10px;
+}
+.hr {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 20px 0 0;
+    margin: 0 9px 10px;
+}
+
+/*                                      Универсальный блок с графической тенью
+-----------------------------------------------------------------------------*/
+.box-shad {
+    width: 176px;
+    height: 176px;
+    background: url("../images/shadow-b.png") no-repeat 50% 100%;
+    padding: 0 0 6px;
+    position: relative;
+}
+.box-shad-l {
+    width: 3px;
+    height: 186px;
+    background: url("../images/shadow-l.png") no-repeat 0 50%;
+    position: absolute;
+    left: -3px; top: 50%;
+    margin: -93px 0 0;
+}
+.box-shad-r {
+    width: 3px;
+    height: 186px;
+    background: url("../images/shadow-r.png") no-repeat 100% 50%;
+    position: absolute;
+    right: -5px; top: 50%;
+    margin: -93px 0 0;
+}
+.box-inner {
+    width: 166px;
+    height: 166px;
+    background: #fff;
+    border: 1px solid #dadada;
+    padding: 5px;
+    overflow: hidden;
+}
+
+/*                                                          Товары, вид блоков
+-----------------------------------------------------------------------------*/
+.product-box {
+    height: 200px;
+    margin: 0 9px 0;
+    float: none;
+}
+.product-box .box-shad {
+    width: 160px;
+    height: 190px;
+}
+.product-box .box-inner{
+    width: 150px;
+    height: 180px;
+    display: block;
+}
+.product-box .box-inner img {
+    display: block;
+    margin: 0 auto;
+}
+.box-inner p {
+    height: 27px;
+    margin: 0;
+    margin: 0 0 5px;
+    line-height: 14px;
+    overflow: hidden;
+    font-size: 11px;
+}
+.box-inner em {
+    height: 24px;
+    font: 700 12px Arial, Tahoma, sans-serif;    
+    color: #ff6e01;
+    line-height: 24px;
+}
+.btn-bye {
+    width: 69px;
+    height: 24px;
+    background: url("../images/sprite.png") no-repeat 0 0;
+    float: right;
+}
+.btn-bye:active {background-position: 0 -48px;}
+.btn-bye:hover {background-position: 0 -24px;}
+
+/*                                                 Статьи и обзоры, вид блоков
+-----------------------------------------------------------------------------*/
+.article-product-box {
+    float: left;
+    margin: 0 9px 0;
+}
+.article-product-box .box-shad {
+    width: auto;
+    height: auto;
+    padding: 0 0 3px;
+}
+.article-product-box .box-shad-r {
+    right: -3px;
+}
+.article-product-box .box-inner {
+    width: 150px;
+    height: auto;
+}
+.article-product-box a {
+    height: 32px;
+    font: 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #3c3c3c;
+    line-height: 16px;
+    display: block;
+    overflow: hidden;
+    margin: 0 0 5px;
+    text-decoration: underline;
+}
+.article-product-box a:hover {
+    text-decoration: none;
+}
+.article-product-box .product-inner {
+    width: 146px;
+    height: 138px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    font: 11px Arial, Tahoma, sans-serif;
+    color: #3a3a3a;
+    position: relative;
+    z-index: 1;
+}
+.article-product-box .product-inner img {
+    margin: 0 auto;
+    display: block;
+}
+
+/*                                                            Фильтр категорий
+-----------------------------------------------------------------------------*/
+.category-filter div.drops {
+    height: 20px;
+    display: inline-block;
+    padding: 0 10px 0 0;
+    cursor: pointer;
+}
+.category-filter div.droped {
+    background-position: 100% -30px;
+}
+.category-filter div em {
+    height: 20px;
+    font: normal 700 13px Arial, Tahoma, sans-serif;    
+    color: #3f3f3f;
+    background: url("../images/dashed-black.png") repeat-x 0 18px;
+    display: block;
+    line-height: 18px;
+    margin: -3px 5px 0;
+}
+.category-filter > a {
+    height: 30px;
+    font: 700 13px Arial, Tahoma, sans-serif;    
+    color: #3f3f3f;
+    background: url("../images/dashed-black.png") repeat-x 0 17px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 5px -1px;
+    z-index: 1;
+}
+.category-filter a:hover, .category-filter div:hover em {background: none;}
+.category-filter a.active {
+    color: #ff6e01;
+    background: url("../images/block-arr-to-top.png") no-repeat 50% 100%;
+}
+.category-filter .dropdown-list li {
+    height: auto;
+    line-height: 12px;
+    padding: 2px 5px 3px;
+}
+.category-filter .dropdown-list a {
+    font: 11px Arial, Tahoma;
+    text-decoration: none;
+    background: none;
+    line-height: 12px;
+    margin: 0;
+}
+
+/*                                                             Табы соц. сетей
+-----------------------------------------------------------------------------*/
+.socials-tabs {
+    width: 210px;
+    text-align: right;
+    padding: 0 20px;
+}
+.socials-tabs h3 {
+    float: left;
+    margin: 0 0 0 -20px;
+    padding: 0;
+}
+.socials-tabs a {
+    width: 38px;
+    height: 25px;
+    display: inline-block;
+    background: url("../images/social-tabs-bg.png") no-repeat 0 -30px;
+    text-align: center;
+    padding: 5px 0 0;
+    margin: 5px 0 0;
+    position: relative;
+    bottom: -2px;
+}
+.socials-tabs a.active {background-position: 0 0;}
+.container {
+    height: 180px;
+    padding: 5px;
+    margin: 0 10px 0 0;
+    border: 1px solid #dadada;
+}
+
+/*                                                              Правая колонка
+-----------------------------------------------------------------------------*/
+#sideRight {
+	float: right;
+	width: 250px;
+	position: relative;
+    margin: 0 0 0 -250px;
+}
+#sideRight .base-block, #sub-sideRight .base-block {
+    border: 1px solid #d9d9d9;
+    padding: 10px 4px;
+    margin: 0 0 10px;
+    border-radius: 5px;
+    behavior: url("../js/PIE.php");
+}
+#sideRight .base-block a img, #sub-sideRight .base-block a img {
+    margin: 0 0 5px;
+} 
+
+/*                                                                    Низ тела
+-----------------------------------------------------------------------------*/
+#bottom {
+    padding: 10px 0 0;
+    background: #fff;
+}
+.btn-manager {
+    width: 228px;
+    height: 30px;
+    background: url("../images/sprite.png") no-repeat 0 -258px;
+    display: inline-block;
+    margin: 2px 0 5px;
+    float: right;
+}
+.btn-manager:hover {
+    background-position: 0 -288px;
+    padding: 0 0 2px;
+    margin: 0 0 5px;
+}
+.seo-text {
+    clear: both;
+    color: #818181;
+    margin: 0 0 20px;
+}
+.seo-text h2, .seo-text h3, .seo-text h4, .seo-text h5 {
+    color: #818181;
+    margin: 0 0 10px;
+}
+
+/*                                                                      Подвал
+-----------------------------------------------------------------------------*/
+#footer {
+	margin: -100px auto 0;
+	min-width: 980px;
+	max-width: 980px;
+	height: 100px;
+	position: relative;
+    vertical-align: top;
+}
+.footer-bg, .footer-bg .sl, .footer-bg .sr {
+    width: 100%;
+    height: 59px;
+    background: url("../images/footer-bg.png") repeat-x 0 -118px;
+    line-height: 60px;
+    
+}
+.footer-img {
+    height: 59px;
+    background: url("../images/footer-bg-reflex.png") no-repeat 70% 0;
+}
+.footer-bg .sl {width: 6px; background-position: 0 0; float: left;}
+.footer-bg .sr {width: 6px; background-position: 0 -59px; float: right;}
+.footer-img > a {
+    font: 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    line-height: 60px;
+    margin: 0 10px;
+}
+.footer-bg .right {
+    font: normal 11px Arial, Tahoma;
+    color: #4f4f4f;
+    text-align: right;
+    line-height: 24px;
+    padding: 5px 10px 0;
+}
+.creators {
+    width: 23px;
+    height: 23px;
+    background: url("../images/secl-logo.png") no-repeat 0 50%;
+    display: inline-block;
+    margin: 0 5px -5px;
+}
+.creators + a:hover {
+    color: #0088c8;
+}
+
+/*                                                            Расширенное меню
+-----------------------------------------------------------------------------*/
+.three-nav {
+    background: url("../images/three-nav-bg.png") repeat-y 10px 0;
+    margin: 0 0 20px;
+}
+.three-nav .first, .three-nav .active a {
+    width: 236px;
+    background: #f2f2f2;
+    border: 1px solid #dadada;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    behavior: url("../js/PIE.php");
+    position: relative;
+    margin: 0;
+    padding: 5px 0 6px 13px;
+}
+.three-nav .last {
+    background: url("../images/three-nav-last-list-bg.png") no-repeat 0 50%;
+}
+.three-nav li {
+    width: 225px;
+    list-style: none;
+    background: url("../images/three-nav-list-bg.png") no-repeat 0 50%;
+    padding: 9px 0 10px 13px;
+    margin: 0 0 0 10px;
+}
+.three-nav a {
+    font: 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    text-decoration: none;
+    line-height: 14px;
+}
+.three-nav a:hover {text-decoration: underline;}
+.three-nav .active {
+    padding: 9px 0 10px 8px;
+}
+.three-nav .active a {
+    width: 218px;
+    font-weight: 600;
+    cursor: default;
+}
+.three-nav .active a:hover {text-decoration: none;}
+
+/*                                                           Фильтр параметров
+-----------------------------------------------------------------------------*/
+.filter-list {
+    padding: 0 10px;
+}
+.filter-list ul {
+    margin: 0 0 20px;
+}
+.filter-list h5 {
+    font: 600 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    margin: 10px 0;
+}
+.filter-list h5 i {
+    width: 14px;
+    height: 12px;
+    background: url("../images/sprite.png") no-repeat -108px -159px;
+    display: inline-block;
+    margin: 0 0 -3px 5px;
+    cursor: pointer;
+}
+.filter-list li {
+    list-style: none;
+    line-height: 26px;
+}
+.filter-list li input[type=checkbox] {
+    margin: 0 10px 0 0;
+}
+.filter-list label {
+    cursor: pointer;
+}
+.filter-list label span {
+    color: #afafaf;
+}
+.reset-link {
+    color: #ff6e01;
+    background: url("../images/dashed-orange.png") repeat-x 0 100%;
+    text-decoration: none;
+    padding: 0 0 1px;
+}
+.reset-link:hover {background: none;}
+
+/*                                                        Список топ категории
+-----------------------------------------------------------------------------*/
+.top-list-title {
+    font-size: 18px;
+    margin: 10px 0 0;
+    padding: 0 0 0 10px;
+}
+.top-list li {
+    list-style: none;
+    padding: 15px 0 15px 10px;
+    clear: both;
+    vertical-align: top;
+}
+.top-list li img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.top-list li a {
+    text-decoration: none;
+    line-height: 20px;
+    position: relative;
+}
+.top-list li a:hover {
+    text-decoration: underline;
+}
+.top-list em {
+    width: 27px;
+    height: 27px;
+    background: url("../images/top-category-bg.png") no-repeat 0 0;
+    font: 600 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: center;
+    display: block;
+    line-height: 25px;
+    text-indent: -3px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    position: absolute;
+    margin: -5px 0 0;
+    z-index: 1;
+}
+
+/*                   Под структура, делим доступную область ещё на две колонки
+-----------------------------------------------------------------------------*/
+#sub-middle {
+	width: 100%;
+	height: 1%;
+	position: relative;
+}
+#sub-middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+#sub-container {
+	width: 100%;
+	float: left;
+}
+#sub-content {
+    padding: 0 265px 0 0;
+}
+#sub-sideRight {
+	float: right;
+	width: 250px;
+	position: relative;
+    margin: 0 0 0 -250px;
+}
+
+/*             Сортировака контента + выбор типа вывода [строчный | табличный]
+-----------------------------------------------------------------------------*/
+.sorting {
+    margin: 0 0 20px;
+}
+.sorting .drops {
+    display: inline-block;
+}
+.line-view, .table-view {
+    width: 21px;
+    height: 20px;
+    background: url("../images/sprite.png") no-repeat -108px -171px;
+    display: inline-block;
+    margin: 0 3px;
+}
+.table-view {background-position: -129px -171px;}
+.line-view.active {background-position: -108px -191px;}
+.table-view.active {background-position: -129px -191px;}
+
+/*                                                       Вид товара [строчный]
+-----------------------------------------------------------------------------*/
+.product-box-full {
+    padding: 0 0 20px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #dadada;
+}
+.product-box-full.last {
+    padding: 0;
+    border: 0;
+}
+.product-box-full .right {
+    width: 260px;
+}
+.product-box-full h3, .product-box-full h4 {
+    height: 34px;
+    font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    line-height: 16px;
+    margin: 0 0 5px;
+    overflow: hidden;
+}
+.product-img-row {
+    float: left;
+}
+.product-img-row img {
+    display: block;
+    margin: 0 auto;
+}
+.product-rate-row {
+    font: 12px Arial, Helvetica, Sans-serif;
+    color: #515151;
+    margin: 0 0 10px;
+}
+.product-rate-row span {
+    float: right;
+}
+.product-description {
+    height: 95px;
+    font: 12px Arial, Helvetica, Sans-serif;
+    color: #bdbdbd;
+    line-height: 15px;
+    overflow: hidden;
+}
+.product-action, .product-action a, .product-rate-row a {
+    color: #ff6e01;
+}
+.product-action strong {
+    font-size: 17px;
+}
+.product-action a, .product-rate-row a {
+    margin: 0 10px 0 5px;
+}
+.product-action .btn-bye {
+    float: none;
+    display: inline-block;
+    margin: 0 10px -8px;
+}
+.product-action label {
+    font: 600 12px Arial, Helvetica, Sans-serif;
+    color: #5d6676;
+    padding: 0 0 0 5px;
+    cursor: pointer;
+}
+.rating {
+    width: 75px;
+    height: 12px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 0 -1px;
+}
+.rate {
+    height: 12px;
+    background: url("../images/rate-star.png") repeat-x 0 50%;
+}
+.ico-tick {
+    width: 16px;
+    height: 12px;
+    background: url("../images/sprite.png") no-repeat -122px -159px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+/*                                                      Вид товара [табличный]
+-----------------------------------------------------------------------------*/
+.product-box-short {
+    width: 166px;
+    float: left;
+    margin: 0 70px 20px 0;
+    position: relative;
+}
+.product-box-short .product-img-row {
+    cursor: pointer;
+}
+.product-box-short h3, .product-box-short h4 {
+    font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    line-height: 16px;
+    margin: 0 0 5px;
+    overflow: visible;
+    clear: both;
+}
+.product-box-short .product-description {
+    width: 166px;
+    height: auto;
+    padding: 5px;
+    background: #fff url("../images/gradient.png") repeat-x 0 100%;
+    border: 1px solid #dadada;
+    overflow: visible;
+    color: #595959;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    behavior: url("../js/PIE.php");
+}
+.fade-block {
+    display: none;
+    background: #fff;
+    position: absolute;
+    top: 180px;
+    padding: 15px 0 0;
+    z-index: 777;
+}
+.product-box-short .product-description .tip-top {
+    height: 13px;
+    display: block;
+    background: url("../images/block-arr-to-top.png") no-repeat 50% 0;
+    margin: -18px 0 5px;
+}
+.product-box-short .product-action p {
+    padding: 10px 0 0;
+}
+
+/*                                                               Зеленые лейбы
+-----------------------------------------------------------------------------*/
+.green-label {
+    width: 160px;
+    height: 61px;
+    background: url("../images/label-sprite.png") repeat-x 0 -61px;
+    font: 600 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    position: absolute;
+}
+.green-label-small em, .green-label em {
+    height: 18px;
+    color: #fff;
+}
+.green-label .sl, .green-label .sr, .green-label-small .sl, .green-label-small .sr {
+    width: 10px;
+    background: url("../images/label-sprite.png") no-repeat 0 0;
+}
+.green-label .sl {
+    height: 61px;
+    background-position: 0 0;
+    float: left;
+    margin: 0 0 0 -10px;
+}
+.green-label .sr {
+    height: 61px;
+    background-position: 0 -122px;
+    float: right;
+    margin: 0 -10px 0 0;
+}
+.green-label .clock {
+    padding: 0 0 0 25px;
+    background: url("../images/clock.png") no-repeat 0 50%;
+    line-height: 16px;
+    font-weight: normal;
+    text-transform: none;
+}
+.green-label em {
+    font-style: normal;
+    margin: 5px 0 0;
+    display: inline-block;
+}
+.green-label-small {
+    height: 31px;
+    display: inline-block;
+    background: url("../images/label-sprite.png") repeat-x 0 -214px;
+    font: 600 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    position: absolute;
+}
+.green-label-small .sl {
+    height: 31px;
+    background-position: 0 -183px;
+    float: left;
+    margin: 0 0 0 -10px;
+}
+.green-label-small .sr {
+    height: 31px;
+    background-position: 0 -245px;
+    float: right;
+    margin: 0 -10px 0 0;
+}
+.green-label-small em {
+    font-style: normal;
+    margin: 5px 5px 0 0;
+    display: inline-block;
+}
+
+/*                                                       Кнопка [показать ещё]
+-----------------------------------------------------------------------------*/
+.btn-show-more {
+    width: 325px;
+    height: 25px;
+    display: inline-block;
+    background: url("../images/btn-gray-bg.png") repeat-x 0 0;
+    font: 500 12px Arial, Helvetica, Sans-serif;
+    color: #393939;
+    padding: 0 5px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+    border: 1px solid #acacac;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.btn-show-more:hover {background-position: 0 -25px;}
+
+/*                                          Выпадающий блок с таблицей страниц
+-----------------------------------------------------------------------------*/
+.action-row .drops {
+    height: 25px;
+    display: inline-block;
+    background: url("../images/btn-gray-bg.png") repeat-x 0 0;
+    text-decoration: none;
+    line-height: 25px;
+    border: 1px solid #acacac;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    float: right;
+    position: relative;
+}
+.action-row .drops div {
+    height: 25px;
+    background: url("../images/arr-down-gray.png") no-repeat 100% 10px;
+    padding: 0;
+    margin: 0 5px;
+}
+.action-row .drops.droped{background-position: 0 -25px;}
+.action-row .drops div em {
+    background: none;
+    font: 500 12px Arial, Helvetica, Sans-serif;
+    color: #393939;
+    padding: 0 17px 0 5px;
+    line-height: 25px;
+}
+table.dropdown-list {
+    position: absolute;
+    top: 30px; right: 0;
+    font-weight: normal;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+table.dropdown-list td {
+    text-align: center;
+}
+table.dropdown-list td a {
+    padding: 0 5px;
+}
+table.dropdown-list td span, table.dropdown-list td a:hover {
+    display: inline-block;
+    background: #ff9921;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 4px;
+    behavior: url("../js/PIE.php");
+}
+
+/*   Вид страницы товара [фото и описание, характеристики, отзывы, аксессуары]
+-----------------------------------------------------------------------------*/
+.stretching-custom {
+    height: 30px;
+}
+.stretching-custom a {
+    color: #ff6e01;
+    text-decoration: none;
+}
+.stretching-custom a:hover {
+    text-decoration: underline;
+}
+.stretching-custom span a {
+    font: 500 11px Arial, Helvetica, Sans-serif;
+    color: #4f4f4f;
+}
+.ico-arrback, .ico-arrforward {
+    width: 12px;
+    height: 11px;
+    background: url("../images/sprite.png") no-repeat -108px -224px;
+    display: inline-block;
+    margin: 0 5px -2px 0;
+}
+.ico-arrfolow {
+    background-position: -122px -224px;
+    margin: 0 0 -2px 5px;
+}
+.ico-print {
+    width: 16px;
+    height: 15px;
+    background: url("../images/sprite.png") no-repeat -150px -196px;
+    display: inline-block;
+    margin: 0 0 -3px 5px;
+}
+.gradient-top {
+    padding: 15px 10px 20px;
+    background: url("../images/gradient-top.png") repeat-x 0 0;
+    border-radius: 5px;
+    behavior: url("../js/PIE.php");
+}
+.gradient-top h1, .gradient-top h2, .gradient-top h3 {
+    font: 600 17px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    line-height: 16px;
+}
+.gradient-top h3 span {
+    font: 500 12px Arial, Helvetica, Sans-serif;
+    color: #7a7a7a;
+    float: right;
+}
+.order-block {
+    max-height: 219px;
+    background: url("../images/sprite-vertical.png") repeat-x 0 -82px;
+    padding: 0;
+    margin: 20px 1px 20px 0;
+    border: 1px solid #e5d7b3;
+    border-right: 0;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.order-block .sl {
+    width: 4px;
+    height: 224px;
+    background: url("../images/sprite-vertical.png") no-repeat 0 -305px;
+    float: left;
+}
+.order-block .inner {
+    padding: 10px 10px 0;
+}
+.order-block .inner > div {
+    margin: 0 0 15px;
+}
+.order-block h4, .order-block h5 {
+    font: 600 14px Arial, Helvetica, Sans-serif;
+    margin: 20px 0 5px;
+}
+.price {
+    width: 74px;
+    height: 41px;
+    background: url("../images/price-tag.png") no-repeat 0 0;
+    font: 500 12px Arial, Helvetica, Sans-serif;
+    color: #353535;
+    display: inline-block;
+    padding: 0 30px 0 10px;
+    line-height: 40px;
+}
+.price.sale {color: #919090;}
+.price strong {
+    font-size: 18px;
+}
+.availability-state-available, .availability-state-sale, .availability-state-inroad {
+    width: 100px;
+    height: 23px;
+    background: url("../images/sprite-vertical.png") repeat-x 0 0;
+    display: inline-block;
+    font: 500 14px Arial, Helvetica, Sans-serif;
+    color: #fff;
+    line-height: 23px;
+    text-align: center;
+    margin: 0 0 0 10px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+.availability-state-sale {
+    background-position: 0 -58px;
+}
+.availability-state-inroad {
+    height: 30px;
+    background-position: 0 -23px;
+    line-height: 14px;
+    position: relative;
+    bottom: -5px;
+    padding: 5px 0 0;
+}
+.availability-state-inroad span {
+    font-size: 10px;
+    display: block;
+}
+.quantity, .input-phone {
+    width: 52px;
+    height: 18px;
+    padding: 6px 4px 4px;
+    border: 1px solid #c2bba9;
+    border-top-color: #9e9887;
+    border-left-color: #9e9887;
+    background: #fff;
+    display: inline-block;
+}
+.input-phone {
+    width: 100px;
+    font: 500 13px Arial, Helvetica, Sans-serif;
+    color: #bebebe;
+    padding: 2px 5px;
+    margin: 0 10px;
+}
+.quantity input {
+    width: 16px;
+    padding: 0 5px;
+    border: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+.quantity-plus, .quantity-minus {
+    width: 13px;
+    height: 13px;
+    background: url("../images/sprite.png") no-repeat -108px -211px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 2px 0 0;
+}
+.quantity-minus {background-position: -121px -211px;}
+.payments {
+    width: 100%;
+    margin: 0 0 10px;
+}
+.payments + p {
+    color: #797979;
+    margin: 0 0 10px;
+}
+.payments + p + p {
+    margin: 0 0 10px;
+}
+.payments + p + p label {
+    margin: 0 0 0 5px;
+}
+.delivery {
+    position: relative;
+    padding: 0 0 10px 40px;
+}
+.ico-truck {
+    width: 26px;
+    height: 24px;
+    background: url("../images/sprite.png") no-repeat -134px -211px;
+    display: inline-block;
+    position: absolute;
+    left: 0; top: 50%;
+    margin: -12px 0 0;
+}
+.btn-orange-big {
+    height: 29px;
+    background: url("../images/sprite-vertical.png") repeat-x 0 -577px;
+    display: inline-block;
+    padding: 0 15px;
+    font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 29px;
+    border: 1px solid #d06b28;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+.btn-orange-big:hover {
+    background-position: 0 -606px;
+    box-shadow: none;
+}
+.btn-orange {
+    height: 24px;
+    background: url("../images/sprite-vertical.png") repeat-x 0 -635px;
+    display: inline-block;
+    padding: 0 10px;
+    font: 600 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 24px;
+    border: 1px solid #d06b28;
+    text-align: center;
+    position: relative;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+.btn-orange:hover {
+    background-position: 0 -659px;
+    box-shadow: none;
+}
+.order-block .btn-orange-big {
+    padding: 0 30px;
+    margin: 0px 0px 0px 15px;
+}
+.order-block .btn-orange-big.no-padd {
+    margin: 0 auto;
+    padding: 0 15px;
+    display: block;
+}
+.order-block .btn-orange-big.no-upper {
+    margin: 10px auto 0;
+    padding: 0 15px;
+    text-transform: none;
+}
+.btn-gray {
+    height: 24px;
+    background: url("../images/sprite-vertical.png") repeat-x 0 -529px;
+    display: inline-block;
+    padding: 0 10px;
+    font: 600 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    line-height: 24px;
+    border: 1px solid #7c7c7c;
+    text-align: center;
+    position: relative;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+.btn-gray:hover {
+    background-position: 0 -553px;
+    box-shadow: none;
+}
+.order-block .btn-gray {margin: 0 15px 0 0;}
+.order-block .pseudo-orange {
+    margin: 0;
+}
+.order-block h4 + div, .order-block h5 + div {
+    margin: 0 0 20px 0;
+}
+.leftColumn .sliderkit-panels {    
+    background: url("../images/sbg.png") repeat-y 0 0;
+}
+.leftColumn .sliderkit-panel {
+    min-height: 700px;
+    background: url("../images/sbbg.png") no-repeat 0 100%;
+    padding-left: 15px;
+}
+.preview {
+    position: absolute;
+    left: 0; top: 0;
+    margin: 5px;
+}
+a.btn-video, a.btn-3d {
+    width: 20px;
+    height: 20px;
+    background: url("../images/sprite.png") no-repeat -170px -320px;
+    display: inline-block!important;
+    margin: 0 5px 0 0;
+}
+a.btn-3d {background-position: -190px -320px;}
+.full-img-view {
+    border: 1px solid #dadada;
+    padding: 10px;
+    margin: 5px 0 0;
+    border-radius: 5px;
+}
+.short-img {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 0 20px;
+}
+.short-img a {
+    width: 70px;
+    height:70px;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    behavior: url("../js/PIE.php");
+    position: relative;
+}
+.short-img a img {
+    max-width: 70px;
+    height:70px;
+    text-align: center;
+}
+.short-img a:hover, .short-img a.active {
+    border-color: #a6a6a6;
+}
+.short-img a.active em {
+    width: 14px;
+    height: 8px;
+    background: url("../images/tile.png") no-repeat 0 0;
+    position: absolute;
+    left: 50%; top: -8px;
+    margin: 0 0 0 -7px;
+}
+
+.sliderkit-news h4, .sliderkit-news h5 {
+    margin: 0 0 10px;
+}
+.ico-plus, .ico-only {
+    width: 34px;
+    height: 34px;
+    background: url("../images/sprite.png") no-repeat -143px 0;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -40px;
+}
+.ico-only {
+    background-position: -177px 0;
+    position: absolute;
+    left: 25px; top: 50%;
+    margin: -14px 0 0;
+}
+.total-price {
+    margin: -10px 0 10px;
+    padding: 0 0 0 70px;
+    position: relative;
+    font: 600 18px Arial, Helvetica, Sans-serif;
+    color: #ff6e01;
+}
+.total-price s {
+    display: block;
+    font-size: 16px;
+    color: #393939;
+}
+.total-price + em {
+    font-size: 14px;
+    color: #424242;
+    display: block;
+    margin: 0 0 15px 25px;
+}
+.total-price + em + a {
+    margin-left: 20px;
+}
+.product-box-mini {
+    width: 180px;
+    float: left;
+    margin: 0 5px 20px;
+    position: relative;
+}
+.product-box-mini h3, .product-box-mini h4 {
+    font: 600 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+    color: #393939;
+    line-height: 16px;
+    margin: 0 0 5px;
+    overflow: visible;
+    clear: both;
+}
+.economy-table {
+    width: 100%;
+}

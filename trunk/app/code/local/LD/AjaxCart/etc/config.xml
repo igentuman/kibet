@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Mage
+ * @package     Mage_Checkout
+ * @copyright   Copyright (c) 2011 Lucid Dreams (http://lucid-dreams.pl)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Marcin Roszak <magento@lucid-dreams.pl>
+ */
+ -->
+<config>
+    <modules>
+        <LD_AjaxCart>
+            <version>0.0.1</version>
+        </LD_AjaxCart>
+    </modules>
+    <global>
+
+        <blocks>
+            <LD_AjaxCart>
+                <class>LD_AjaxCart_Block</class>
+            </LD_AjaxCart>
+            <catalog>
+                <rewrite>
+                    <product_list>LD_AjaxCart_Block_List</product_list>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <resources>
+            <LD_AjaxCart_setup>
+                <setup>
+                    <module>LD_AjaxCart</module>
+                </setup>
+            </LD_AjaxCart_setup>
+        </resources>
+
+    </global>
+    <frontend>
+        <routers>
+            <ajaxcart>
+                <use>standard</use>
+                <args>
+                    <module>LD_AjaxCart</module>
+                    <frontName>ajaxcart</frontName>
+                </args>
+            </ajaxcart>
+        </routers>
+    </frontend>
+</config>

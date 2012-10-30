@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <LD_AjaxCart>
+            <active>true</active>
+            <codePool>local</codePool>
+        </LD_AjaxCart>
+    </modules>
+</config>

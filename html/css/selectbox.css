@@ -1,0 +1,72 @@
+.selectbox {
+    vertical-align: middle;
+    cursor: pointer;
+}
+.selectbox .select {
+  width: 75px;
+  height: 24px;
+  padding: 0 20px 0 5px;
+  background: url("../images/search-field-bg.png") repeat-x 0 -66px;
+  font: 11px Arial, Tahoma, sans-serif;
+  color: #727272;
+  line-height: 24px;
+  border-right: 1px solid #dedede;
+  z-index: 888!important;
+}
+.selectbox .select:hover {}
+.selectbox .select:active {}
+.selectbox.focused .select {}
+.selectbox .select .text {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.selectbox .trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.selectbox .trigger .arrow {
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #000;
+	overflow: hidden;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.selectbox:hover .arrow {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.selectbox ul.dropdown {
+    top: 30px;
+    width: 140px;
+    margin: 0;
+    padding: 5px 0;
+    margin: 0 0 0 -5px;
+    background: #FFF;
+    border: 1px solid #C6CBD0;
+    font: 11px/18px Arial, Tahoma, sans-serif;
+    border-radius: 4px;
+    z-index: 11;
+}
+.selectbox li {
+	padding: 0px 5px 0px;
+	color: #727272;
+}
+.selectbox li:hover,
+.selectbox li.selected {
+	background: #ebebeb;
+	color: #727272;
+}
+.selectbox li.disabled {
+	color: #AAA;
+}
+.selectbox li.disabled:hover {
+	background: none;
+}

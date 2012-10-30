@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mage_Mainpay>
+            <version>0.1.0</version>
+        </Mage_Mainpay>
+    </modules>
+
+    <global>
+        <models>
+            <mainpay>
+                <class>Mage_Mainpay_Model</class>
+				<resourceModel>mainpay_mysql4</resourceModel>
+            </mainpay>
+			<mainpay_mysql4>
+				<class>Mage_Mainpay_Model_Mysql4</class>
+			</mainpay_mysql4>
+        </models>
+		<helpers>
+			<mainpay>
+				<class>Mage_Mainpay_Helper</class>
+			</mainpay>
+		</helpers>
+        <resources>
+            <mainpay_setup>
+                <setup>
+                    <module>Mage_Mainpay</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </mainpay_setup>
+            <mainpay_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </mainpay_write>
+            <mainpay_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </mainpay_read>
+        </resources>
+        <blocks>
+            <mainpay>
+                <class>Mage_Mainpay_Block</class>
+            </mainpay>
+        </blocks>
+    </global>
+	
+    <frontend>
+        <secure_url>
+            <mainpay_mainpaymodel>/mainpay/mainpaymodel</mainpay_mainpaymodel>
+        </secure_url>
+        <routers>
+            <mainpay>
+                <use>standard</use>
+                <args>
+                    <module>Mage_Mainpay</module>
+                    <frontName>mainpay</frontName>
+                </args>
+            </mainpay>
+        </routers>
+		<translate>
+			<modules>
+				<Mage_Mainpay>
+					<files>
+						<default>Mage_Mainpay.csv</default>
+					</files>
+				</Mage_Mainpay>
+			</modules>
+		</translate>
+    </frontend>
+	
+	<adminhtml>
+		<translate>
+			<modules>
+				<Mage_Mainpay>
+					<files>
+						<default>Mage_Mainpay.csv</default>
+					</files>
+				</Mage_Mainpay>
+			</modules>
+		</translate>
+	</adminhtml>
+
+    <default>
+        <payment>
+            <mainpay_mainpaymodel>
+                <active>0</active>
+                <model>mainpay/mainpaymodel</model>
+                <order_status>processing</order_status>
+                <title>MainPay</title>
+                
+				<key />
+				<secret_key backend_model="adminhtml/system_config_backend_encrypted" />
+				<sort_order />
+            </mainpay_mainpaymodel>
+        </payment>
+    </default>
+</config>

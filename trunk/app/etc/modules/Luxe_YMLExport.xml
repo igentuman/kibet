@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Luxe_YMLExport>
+            <active>true</active>
+            <codePool>local</codePool>
+            <version>0.1.12</version>
+        </Luxe_YMLExport>
+    </modules>
+</config>
